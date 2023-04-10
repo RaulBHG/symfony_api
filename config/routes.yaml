@@ -1,3 +1,9 @@
-controllers:
-    resource: ../src/Controller/
-    type: attribute
+users_list:
+    path:       /api/users
+    controller: App\Controller\UserController::list
+    methods:    GET|HEAD
+
+users_edit:
+    path:       /api/users/{id}
+    controller: App\Controller\UserController::edit
+    methods:    PUT
