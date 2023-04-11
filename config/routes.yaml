@@ -7,3 +7,6 @@ users_edit:
     path:       /api/users/{id}
     controller: App\Controller\UserController::edit
     methods:    PUT
+
+api_login_check:
+    path: /api/login_check

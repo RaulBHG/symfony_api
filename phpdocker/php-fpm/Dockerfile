@@ -44,4 +44,4 @@ RUN echo "alias ls='ls \$LS_OPTIONS'" >> /root/.bashrc
 
 
 ## HABILITAR EXTENSIONES PARA MYSQL
-#RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql xml pcntl
+RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql xml pcntl
