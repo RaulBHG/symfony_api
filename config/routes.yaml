@@ -3,10 +3,30 @@ users_list:
     controller: App\Controller\UserController::list
     methods:    GET|HEAD
 
+users_show:
+    path:       /api/users/{id}
+    controller: App\Controller\UserController::show
+    methods:    GET|HEAD
+
+users_new:
+    path:       /api/users
+    controller: App\Controller\UserController::new
+    methods:    POST
+
+users_update:
+    path:       /api/users/{id}
+    controller: App\Controller\UserController::update
+    methods:    POST
+
 users_edit:
     path:       /api/users/{id}
     controller: App\Controller\UserController::edit
     methods:    PUT
+
+users_delete:
+    path:       /api/users/{id}
+    controller: App\Controller\UserController::delete
+    methods:    DELETE
 
 api_login_check:
     path: /api/login_check

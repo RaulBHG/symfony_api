@@ -35,7 +35,7 @@ class User
     #[ORM\Column]
     private ?\DateTimeImmutable $created_at = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $updated_at = null;
 
     public function getId(): ?int
@@ -120,9 +120,9 @@ class User
         return $this->created_at;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): self
+    public function setCreatedAt(): self
     {
-        $this->created_at = $created_at;
+        $this->created_at = new \DateTimeImmutable();
 
         return $this;
     }
@@ -132,9 +132,9 @@ class User
         return $this->updated_at;
     }
 
-    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    public function setUpdatedAt(): self
     {
-        $this->updated_at = $updated_at;
+        $this->updated_at = new \DateTimeImmutable();
 
         return $this;
     }
