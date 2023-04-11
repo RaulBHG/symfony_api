@@ -28,4 +28,4 @@ services:
         working_dir: /application
         volumes:
             - .:/application:cached
-            - ./phpdocker/php-fpm/php-ini-overrides.ini:/usr/local/etc/php/conf.d/99-overrides.ini
+            - ./phpdocker/php-fpm/php-ini-overrides.ini:/usr/local/etc/php/conf.d/99-overrides.ini    
