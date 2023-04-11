@@ -41,6 +41,7 @@ class UserController extends AbstractController
         ->from(User::class, 'u');
 
         // Agregar condiciones según los filtros recibidos
+        // TODO: Separar a service todo aquí por más legible
         if (isset($content['filters'])) {
             $conditions = array();
         
@@ -70,6 +71,7 @@ class UserController extends AbstractController
                         break;
                 }
             }
+            // TODO: Separar a service todo aquí por más legible
         
             $qb->andWhere(implode(' AND ', $conditions));
         }
